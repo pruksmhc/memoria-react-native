@@ -6,7 +6,7 @@ import Favorites from "./components/Favorites";
 import Login from './components/Login';
 import Chat from './components/Chat';
 import CreateAccount from "./components/CreateAccount";
-import  { NavigationContainer, createDrawerNavigator } from 'react-navigation-drawer'
+import  { NavigationContainer } from 'react-navigation-drawer'
 const AppNavigator = createStackNavigator({
 
   Login: Login,
@@ -15,16 +15,5 @@ const AppNavigator = createStackNavigator({
   Favorites: Favorites
 });
 
-export default createAppContainer(createDrawerNavigator({
-  Login: Login,
-  Favorites: Favorites,
-  Chat: Chat,
-  CreateAccount: CreateAccount
-}, {
-  initialRouteName: 'Login',
-  contentOptions: {
-    activeTintColor: '#e91e63',
-  },
 
-}));
-
+export default createAppContainer(AppNavigator);
